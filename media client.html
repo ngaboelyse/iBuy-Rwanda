@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Alex Smith</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .sidebar {
+            width: 290px;
+            background-color: #111;
+            color: white;
+            padding: 2rem;
+            position: fixed;
+            height: 100vh;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: block;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-status {
+            text-align: center;
+            color: #888;
+            margin-bottom: 2rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+            width: 100%;
+        }
+
+        .nav-menu li {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #e74c3c;
+        }
+
+        .nav-menu .active {
+            color: #e74c3c;
+        }
+
+        .nav-menu a.active {
+            color: #ff4444;
+        }
+
+        .main-content {
+            margin-left: 290px;
+            padding: 2rem;
+            width: calc(100% - 290px);
+        }
+
+        .testimonials-header {
+            margin-bottom: 3rem;
+        }
+
+        .testimonials-header h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .quote-mark {
+            color: #ff4444;
+            font-size: 4rem;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-author-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            object-fit: cover;
+        }
+
+        .testimonial-author-name {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 1200px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 1rem;
+            }
+
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 1rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <img src="globe.gif" alt="Profile" class="profile-image">
+        <h2 class="profile-name">iBuy Rwanda</h2>
+        <p class="profile-status">Available for work</p>
+        <nav><br>
+            <ul class="nav-menu">
+                <li><a href="file:///C:/Users/Ngabo/Desktop/iBuy%20Rwanda/home%20media.html">Home</a></li>
+                <li><a href="file:///C:/Users/Ngabo/Desktop/iBuy%20Rwanda/media%20about.html">About</a></li>
+                <li><a href="file:///C:/Users/Ngabo/Desktop/iBuy%20Rwanda/media%20service.html">Services</a></li>
+                <li><a href="file:///C:/Users/Ngabo/Desktop/iBuy%20Rwanda/media%20client.html" class="active">Clients</a></li>
+                <li><a href="file:///C:/Users/Ngabo/Desktop/iBuy%20Rwanda/media%20contact.html">contact</a></li>
+
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="testimonials-header">
+            <h1>What my clients think about me</h1>
+        </header>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="quote-mark">"</div>
+                <p class="testimonial-text">Venuste did an excellent creative job. Quick and professional. Highly recommended, and will definitely work with him again.</p>
+                <img src="congz.jpeg" alt="Maria Wilson" class="testimonial-author-img">
+                <h3 class="testimonial-author-name">Venus</h3>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote-mark">"</div>
+                <p class="testimonial-text">“I’m sure today will be only the first of many proud moments for you at your new firm.”</p>
+                <img src="ashel.jpeg" alt="John Santana" class="testimonial-author-img">
+                <h3 class="testimonial-author-name">Success Olivier</h3>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote-mark">"</div>
+                <p class="testimonial-text">“Wishing you success and prosperity in your new venture”</p>
+                <img src="venus.jpeg" alt="Julia Sakura" class="testimonial-author-img">
+                <h3 class="testimonial-author-name">Ashel</h3>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

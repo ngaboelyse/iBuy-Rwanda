@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Smith Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 290px;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 2rem;
+            position: fixed;
+            height: 100vh;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: block;
+            object-fit: cover;
+        }
+
+        .name {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .status {
+            text-align: center;
+            color: #888;
+            margin-bottom: 2rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+            text-align: center;
+        }
+        .nav-menu a{
+            .nav-menu a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.1rem;
+                transition: color 0.3s ease;
+            }
+        }
+        .nav-item {
+            margin-bottom: 1rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #888;
+        }
+
+        .nav-link.active {
+            color: #ff4d4d;
+        }
+
+        .main-content {
+            margin-left: 290px;
+            padding: 2rem;
+            width: calc(100% - 290px);
+        }
+
+        .portfolio-header {
+            margin-bottom: 2rem;
+        }
+
+        .portfolio-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-subtitle {
+            color: #666;
+        }
+
+        .filter-menu {
+            margin-bottom: 2rem;
+        }
+
+        .filter-button {
+            border: none;
+            background: none;
+            font-size: 1rem;
+            margin-right: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem 0;
+            color: #666;
+            position: relative;
+        }
+
+        .filter-button.active {
+            color: #ff4d4d;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 1200px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 1rem;
+            }
+
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                flex-direction: column;
+            }
+
+            .nav-menu {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .nav-item {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <img src="globe.gif" alt="Alex Smith" class="profile-image">
+        <h1 class="name">iBuy Rwanda</h1>
+        <p class="status">Available for work</p>
+        <nav><br><br>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active">Portfolio</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Clients</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="portfolio-header">
+            <h2 class="portfolio-title">Portfolio</h2>
+            <p class="portfolio-subtitle">Showcasing some of my best work</p>
+        </header>
+
+        <div class="filter-menu">
+            <button class="filter-button active">All</button>
+            <button class="filter-button">Brand</button>
+            <button class="filter-button">Design</button>
+            <button class="filter-button">Photos</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="/api/placeholder/400/400" alt="Label Tags">
+            </div>
+            <div class="portfolio-item">
+                <img src="/api/placeholder/400/400" alt="Shopping Bag">
+            </div>
+            <div class="portfolio-item">
+                <img src="/api/placeholder/400/400" alt="Bag Mockup">
+            </div>
+            <div class="portfolio-item">
+                <img src="/api/placeholder/400/400" alt="Project 4">
+            </div>
+            <div class="portfolio-item">
+                <img src="/api/placeholder/400/400" alt="Project 5">
+            </div>
+            <div class="portfolio-item">
+                <img src="/api/placeholder/400/400" alt="Project 6">
+            </div>
+        </div>
+    </main>
+</body>
+</html>

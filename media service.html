@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            background-color: #18191A;
+            width: 280px;
+            padding: 2rem;
+            position: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-container {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 1rem;
+            border: 3px solid #2d2d2d;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .name {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .status {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .nav-menu {
+            width: 100%;
+            list-style: none;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .nav-menu li {
+            margin: 1rem 0;
+        }
+
+        .nav-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+
+        }
+
+        .nav-menu a:hover {
+            color: #ff4444;
+        }
+
+        .nav-menu a.active {
+            color: #ff4444;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            margin-left: 280px;
+            flex: 1;
+            padding: 3rem;
+        }
+
+        .services-header {
+            margin-bottom: 3rem;
+        }
+
+        .services-header h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .services-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border: 1px solid #eee;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            width: 470px;
+            height: 470px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .service-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .service-title {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            color:black;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Media Queries */
+        @media (max-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 1rem;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            body {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-header h1 {
+                font-size: 2rem;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="globe.gif" alt="Alex Smith">
+            </div>
+            <h2 class="name">iBuy Rwanda</h2>
+            <p class="status">Available for work</p>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="file:///C:/Users/Ngabo/Desktop/iBuy%20Rwanda/home%20media.html" >Home</a></li>
+            <li><a href="file:///C:/Users/Ngabo/Desktop/iBuy%20Rwanda/media%20about.html">About</a></li>
+            <li><a href="file:///C:/Users/Ngabo/Desktop/iBuy%20Rwanda/media%20service.html" class="active">Services</a></li>
+            <li><a href="file:///C:/Users/Ngabo/Desktop/iBuy%20Rwanda/media%20client.html">Clients</a></li>
+            <li><a href="file:///C:/Users/Ngabo/Desktop/iBuy%20Rwanda/media%20contact.html">contact</a></li>
+
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <div class="services-header">
+            <h1>My Services</h1>
+            <p>Services i offer to my clients</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="elctro.avif" alt="Alex Smith Profile">
+                </div>
+                <h3 class="service-title">ELECTRONICS PRODUCT</h3>
+                <p class="service-description"> entertainment (flatscreen TVs, television sets, 
+                    MP3 players, video recorders, DVD players, radio receivers, etc.) communications (telephones, 
+                    cell phones, e-mail-capable personal computers, desktop computers, laptops, printers, paper shredders, etc.)</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="fashion and design.avif" alt="Alex Smith Profile">
+                </div>
+                <h3 class="service-title">Fashion Design</h3>
+                <p class="service-description">"Our website offers a curated selection of fashion items that reflect both the latest trends
+                    and timeless styles. From elegant evening wear to everyday casuals, we bring you pieces that
+                     suit every occasion and personality. Each item is chosen with care to ensure quality, comfort,
+                      and style, catering to the diverse tastes and preferences of our customers."</p>
+            </div>
+
+            <div class="service-card">
+                
+                <div class="service-icon">
+                    <h3 class="service-title">Home Furniture</h3>
+                    <img src=" home.webp" alt="Alex Smith Profile">
+                </div>
+                
+                <p class="service-description">HOME FURNITURE</h2> </strong><br>
+                   "we understand that your home is your sanctuary,
+                   a place where comfort and functionality meet. That's why our Home Essentials
+                    category offers a carefully curated selection of products designed to enhance your living space.
+                     From cozy bedding and stylish furniture to practical kitchen tools and storage solutions,
+                      we provide high-quality items that fit seamlessly into your daily life. Whether you're 
+                      looking to organize, redecorate, or simply add a touch of warmth, our Home Essentials are 
+                      tailored to meet your needs."
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <img src="fashion and design.avif" alt="Alex Smith Profile">
+            </div>
+            <h3 class="service-title">Fashion Design</h3>
+            <p class="service-description">"Our website offers a curated selection of fashion items that reflect both the latest trends
+                and timeless styles. From elegant evening wear to everyday casuals, we bring you pieces that
+                 suit every occasion and personality. Each item is chosen with care to ensure quality, comfort,
+                  and style, catering to the diverse tastes and preferences of our customers."</p>
+        </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

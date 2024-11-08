@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Alex Smith</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .sidebar {
+            width: 290px;
+            background-color: #111;
+            color: white;
+            padding: 2rem;
+            position: fixed;
+            height: 100vh;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: block;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-status {
+            text-align: center;
+            color: #888;
+            margin-bottom: 2rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+            text-align: center;
+        }
+
+        .nav-menu li {
+            margin: 1rem 0;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .nav-menu a:hover {
+            color: #ff4444;
+        }
+
+        .nav-menu a.active {
+            color: #ff4444;
+        }
+
+        .main-content {
+            margin-left: 290px;
+            padding: 3rem;
+            width: calc(100% - 290px);
+        }
+
+        .contact-header {
+            margin-bottom: 2rem;
+        }
+
+        .contact-header h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .contact-form {
+            max-width: 800px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 0;
+            font-size: 1rem;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            background: transparent;
+            transition: border-color 0.3s;
+            outline: none;
+        }
+
+        .form-control::placeholder {
+            color: #999;
+        }
+
+        .form-control:focus {
+            border-bottom-color: #ff4444;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #ff2222;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 1rem;
+            }
+
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 1.5rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .contact-header h1 {
+                font-size: 2rem;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <img src="globe.gif" alt="Profile" class="profile-image">
+        <h2 class="profile-name">ibuy Rwanda</h2>
+        <p class="profile-status">Available for work</p>
+        <nav><br>
+            <ul class="nav-menu">
+                <li><a href="file:///C:/Users/Ngabo/Desktop/iBuy%20Rwanda/home%20media.html">Home</a></li>
+            <li><a href="file:///C:/Users/Ngabo/Desktop/iBuy%20Rwanda/media%20about.html">About</a></li>
+            <li><a href="file:///C:/Users/Ngabo/Desktop/iBuy%20Rwanda/media%20service.html">Services</a></li>
+            <li><a href="file:///C:/Users/Ngabo/Desktop/iBuy%20Rwanda/media%20client.html">Clients</a></li>
+            <li><a href="file:///C:/Users/Ngabo/Desktop/iBuy%20Rwanda/media%20contact.html" class="active">contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="contact-header">
+            <h1>Get in Touch</h1>
+            <p>Feel free to contact me anytime</p>
+        </header>
+
+        <form class="contact-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" placeholder="Message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </main>
+</body>
+</html>
